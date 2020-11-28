@@ -1,4 +1,5 @@
 using Auth.Api.Models;
+using Auth.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
 namespace Auth.Api
 {
     public class Startup
@@ -18,12 +18,27 @@ namespace Auth.Api
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<UserContext>(options =>
             {
                 options.UseNpgsql(connectionString);
             });
 
+            services.AddControllers();
+
+            var authOptionsConfiguration = Configuration.GetSection("Auth");
+            services.Configure<AuthOptions>(authOptionsConfiguration);
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+                });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -35,12 +50,11 @@ namespace Auth.Api
 
             app.UseRouting();
 
+            app.UseCors();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllers();
             });
         }
     }
