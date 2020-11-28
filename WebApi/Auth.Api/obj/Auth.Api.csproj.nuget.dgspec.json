@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Project\\WebApi\\WebApi\\WebApi.csproj": {}
+    "C:\\Project\\WebApi\\Auth.Api\\Auth.Api.csproj": {}
   },
   "projects": {
-    "C:\\Project\\WebApi\\WebApi\\WebApi.csproj": {
+    "C:\\Project\\WebApi\\Auth.Api\\Auth.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Project\\WebApi\\WebApi\\WebApi.csproj",
-        "projectName": "AuthApi",
-        "projectPath": "C:\\Project\\WebApi\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Project\\WebApi\\Auth.Api\\Auth.Api.csproj",
+        "projectName": "Auth.Api",
+        "projectPath": "C:\\Project\\WebApi\\Auth.Api\\Auth.Api.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Project\\WebApi\\WebApi\\obj\\",
+        "outputPath": "C:\\Project\\WebApi\\Auth.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
