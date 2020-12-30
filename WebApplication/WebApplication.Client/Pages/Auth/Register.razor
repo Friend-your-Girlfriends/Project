@@ -1,0 +1,72 @@
+﻿@page "/auth/register"
+@layout AuthLayout
+
+@using WebApplication.Shared.User
+
+@inject AuthenticationService authService 
+@inject NavigationManager navigationManager
+
+<div class="row">
+    <div class="col-12">
+        <h2>Создайте учетную запись</h2>
+        <EditForm Model="model" OnValidSubmit="RegisterUser">
+            <RadzenCard>
+                <AlertMessage Message="@message" MessageType="@messageType" />
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <label>Email</label>
+                <RadzenTextBox @bind-Value="model.Email"></RadzenTextBox>
+                <label>Пароль</label>
+                <RadzenPassword @bind-Value="model.Password"></RadzenPassword>
+                <label>Подтверждение пароля</label>
+                <RadzenPassword @bind-Value="model.ConfirmPassword"></RadzenPassword>
+
+                <hr />
+
+                <RadzenButton ButtonType="Radzen.ButtonType.Submit" Text="Зарегистрироваться"
+                              ButtonStyle="Radzen.ButtonStyle.Primary" class="btn-block mr-2"
+                              Disabled="isBusy"/>
+
+                <RadzenButton ButtonType="Radzen.ButtonType.Submit" Text="Войти"
+                              ButtonStyle="Radzen.ButtonStyle.Secondary" class="btn-block mr-2"
+                              Disabled="isBusy" Click="GoToLogin"/>
+            </RadzenCard>
+        </EditForm>
+
+    </div>
+</div>
+
+
+@code {
+    RegisterViewModel model = new RegisterViewModel();
+
+    bool isBusy = false;
+
+    string message = string.Empty;
+
+    Models.AlertMessageType messageType = Models.AlertMessageType.Success;
+
+    public async Task RegisterUser()
+    {
+        isBusy = true;
+
+        var result = await authService.RegisterUserAsync(model);
+        if (result.IsSuccess)
+        {
+            message = result.Message;
+            messageType = Models.AlertMessageType.Success;
+        }
+        else
+        {
+            message = result.Errors.FirstOrDefault() ?? result.Message;
+            messageType = Models.AlertMessageType.Error;
+        }
+        isBusy = false;
+    }
+
+    void GoToLogin()
+    {
+        navigationManager.NavigateTo("/auth/login");
+    }
+}

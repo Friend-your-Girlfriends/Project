@@ -1,0 +1,9 @@
+C:\Project\WebApplication\WebApplication.Shared\bin\Debug\netstandard2.0\WebApplication.Shared.deps.json
+C:\Project\WebApplication\WebApplication.Shared\bin\Debug\netstandard2.0\WebApplication.Shared.dll
+C:\Project\WebApplication\WebApplication.Shared\bin\Debug\netstandard2.0\WebApplication.Shared.pdb
+C:\Project\WebApplication\WebApplication.Shared\obj\Debug\netstandard2.0\WebApplication.Shared.csprojAssemblyReference.cache
+C:\Project\WebApplication\WebApplication.Shared\obj\Debug\netstandard2.0\WebApplication.Shared.AssemblyInfoInputs.cache
+C:\Project\WebApplication\WebApplication.Shared\obj\Debug\netstandard2.0\WebApplication.Shared.AssemblyInfo.cs
+C:\Project\WebApplication\WebApplication.Shared\obj\Debug\netstandard2.0\WebApplication.Shared.csproj.CoreCompileInputs.cache
+C:\Project\WebApplication\WebApplication.Shared\obj\Debug\netstandard2.0\WebApplication.Shared.dll
+C:\Project\WebApplication\WebApplication.Shared\obj\Debug\netstandard2.0\WebApplication.Shared.pdb

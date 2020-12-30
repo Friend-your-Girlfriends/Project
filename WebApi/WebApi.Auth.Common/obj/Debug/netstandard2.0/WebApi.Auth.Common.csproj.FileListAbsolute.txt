@@ -1,9 +1,0 @@
-C:\Project\WebApi\WebApi.Auth.Common\bin\Debug\netstandard2.0\WebApi.Auth.Common.deps.json
-C:\Project\WebApi\WebApi.Auth.Common\bin\Debug\netstandard2.0\WebApi.Auth.Common.dll
-C:\Project\WebApi\WebApi.Auth.Common\bin\Debug\netstandard2.0\WebApi.Auth.Common.pdb
-C:\Project\WebApi\WebApi.Auth.Common\obj\Debug\netstandard2.0\WebApi.Auth.Common.csprojAssemblyReference.cache
-C:\Project\WebApi\WebApi.Auth.Common\obj\Debug\netstandard2.0\WebApi.Auth.Common.AssemblyInfoInputs.cache
-C:\Project\WebApi\WebApi.Auth.Common\obj\Debug\netstandard2.0\WebApi.Auth.Common.AssemblyInfo.cs
-C:\Project\WebApi\WebApi.Auth.Common\obj\Debug\netstandard2.0\WebApi.Auth.Common.csproj.CoreCompileInputs.cache
-C:\Project\WebApi\WebApi.Auth.Common\obj\Debug\netstandard2.0\WebApi.Auth.Common.dll
-C:\Project\WebApi\WebApi.Auth.Common\obj\Debug\netstandard2.0\WebApi.Auth.Common.pdb
